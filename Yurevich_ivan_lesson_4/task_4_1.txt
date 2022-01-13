@@ -1,0 +1,64 @@
+a. Проверить, установлен ли пакет pillow в глобальном окружении. Если да — зафиксировать версию.
+
+C:\Users\Sonya\PycharmProjects>pip show Pillow
+Name: Pillow
+Version: 9.0.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: c:\users\sonya\appdata\local\programs\python\python39\lib\site-packages
+Requires:
+Required-by:
+
+
+
+b. Установить самую свежую версию pillow, если ранее она не была установлена.
+
+Установлена самая актуальная версия Pillow 9.0.0 (проверено на сайте https://pypi.org/project/Pillow/)
+
+
+c. Создать и активировать виртуальное окружение. Убедиться, что в нем нет пакета pillow.
+
+C:\Users\Sonya\PycharmProjects>python -m venv virt
+C:\Users\Sonya\PycharmProjects>"virt/Scripts/activate.bat"
+(virt) C:\Users\Sonya\PycharmProjects>
+
+(virt) C:\Users\Sonya\PycharmProjects>pip freeze
+certifi==2021.10.8
+charset-normalizer==2.0.10
+idna==3.3
+requests==2.27.1
+urllib3==1.26.7
+
+d. Установить в виртуальное окружение pillow версии 7.1.1 (или другой, отличной от самой свежей).
+
+Версия 7.1.1 не установилась - возник конфликт. Я установил предпоследнюю версию 8.4.0
+
+(virt) C:\Users\Sonya\PycharmProjects>pip install pillow==8.4.0
+Collecting pillow==8.4.0
+  Downloading Pillow-8.4.0-cp39-cp39-win_amd64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 1.3 MB/s
+Installing collected packages: pillow
+Successfully installed pillow-8.4.0
+
+(virt) C:\Users\Sonya\PycharmProjects>pip freeze
+certifi==2021.10.8
+charset-normalizer==2.0.10
+idna==3.3
+Pillow==8.4.0
+requests==2.27.1
+urllib3==1.26.7
+
+
+e. Деактивировать виртуальное окружение.
+
+(virt) C:\Users\Sonya\PycharmProjects>deactivate
+C:\Users\Sonya\PycharmProjects>
+
+
+
+f. Если будут проблемы с pillow - можно поработать с другим пакетом: например, requests.
+
+Проблемы были только с версией 7.1.1 - она, как я понял, не поддерживается моей версией питона.
